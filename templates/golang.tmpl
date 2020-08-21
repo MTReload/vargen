@@ -1,0 +1,9 @@
+//{{- /*gotype: github.com/mtreload/VariablesGenerator/cmd/vargen.Templa*/ -}}
+{{ .Meta.Message }}
+package {{ .Package }}
+
+var (
+{{range .Variables}}
+    {{ .Name }} = "{{.Value}}"
+{{end}}
+)
