@@ -60,7 +60,7 @@ func main() {
 	}
 
 	if *packName == "" {
-		*packName, err = filepath.Abs(*inFileName)
+		*packName, err = filepath.Abs(*outFileName)
 		if err != nil {
 			log.Fatal("can't get dir name: " + err.Error())
 		}
